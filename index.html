@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumo Certo</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- 🧭 Cabeçalho -->
+  <header id="titulo">
+    <h1>Rumo Certo</h1>
+  </header>
+
+  <!-- 🍔 Menu padrão (versão web/desktop) -->
+  <nav class="menu-rumo-certo" role="navigation" aria-label="Menu principal">
+    <ul>
+      <li><a href="htmls/Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="htmls/Serviços.html">Serviços</a></li>
+      <li><a href="htmls/Contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- 📱 Barra com botão hambúrguer (somente mobile) -->
+  <nav class="barra-mobile" role="navigation" aria-label="Menu mobile">
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  </nav>
+
+  <!-- 📱 Menu mobile (abre abaixo da barra) -->
+  <nav class="menu-mobile" role="navigation" aria-label="Menu mobile expandido">
+    <ul>
+      <li><a href="htmls/Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="htmls/Serviços.html">Serviços</a></li>
+      <li><a href="htmls/Contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Conteúdo principal -->
+  <main>
+    <h2>Bem-vindo à Rumo Certo</h2>
+    <p>Consertamos eletrodomésticos com qualidade e confiança.</p>
+    <p>Navegue pelas categorias acima para conhecer nossos serviços.</p>
+  </main>
+
+  <!-- 🧭 Rodapé -->
+  <footer>
+    <ul>
+      <li><a href="htmls/Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="htmls/Serviços.html">Serviços</a></li>
+      <li><a href="htmls/Contato.html">Contato</a></li>
+    </ul>
+  </footer>
+
+  <!-- ♿️ Estrutura VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+<!-- ⚙️ Scripts -->
+ <script src="JavaScript/Menu.js"></script>
+<script src="JavaScript/userway-widget.js"></script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  // Inicialização do VLibras
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

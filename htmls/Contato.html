@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/Contato.css" />
+  <script src="../JavaScript/userway-widget.js"></script>
+  <title>Rumo Certo - Contato</title>
+</head>
+<body>
+
+  <header id="titulo" role="banner">
+    <h1>Rumo Certo</h1>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav class="menu-rumo-certo" aria-label="Menu principal">
+    <ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#valores">Valores</a></li>
+      <li><a href="#regiao">Atendimento</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+    <section id="contato" aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Entre em contato</h2>
+
+      <!-- Conteúdo gerado via DOM -->
+      <div id="info-contato"></div>
+
+      <div class="mapa" aria-label="Localização no Google Maps">
+        <iframe
+          src="https://www.google.com/maps?q=R.+Dr.+Delfino+Cintra,+275+-+Botafogo,+Campinas+-+SP,+13020-100&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          title="Mapa de localização da Rumo Certo">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <nav aria-label="Rodapé">
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- Script externo que gera o conteúdo via DOM -->
+  <script src="../JavaScript/Contato/Contato.js"></script>
+</body>
+</html>

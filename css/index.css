@@ -1,0 +1,178 @@
+/* 🌐 Base */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1F2937;
+  background-color: #F3F4F6;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧭 Cabeçalho */
+#titulo {
+  background-color: #E5E7EB;
+  padding: 20px;
+  text-align: center;
+}
+
+#titulo h1 {
+  font-size: 2.5em;
+  color: #0077cc;
+  margin: 0;
+}
+
+/* 🏠 Conteúdo principal */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+main h2 {
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+/* 🧭 Rodapé */
+footer {
+  background-color: #0077cc;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #cce7ff;
+}
+
+/* 🍔 Menu padrão (desktop) */
+.menu-rumo-certo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.menu-rumo-certo ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-rumo-certo li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-rumo-certo li a:hover {
+  background-color: #E0F2FE;
+  border-radius: 5px;
+  color: #005fa3;
+}
+
+/* 🔒 Esconde barra e menu mobile por padrão */
+.barra-mobile,
+.menu-mobile {
+  display: none;
+}
+
+/* 📱 Versão mobile */
+@media (max-width: 600px) {
+  /* Esconde menu padrão */
+  .menu-rumo-certo {
+    display: none;
+  }
+
+  /* Barra abaixo do cabeçalho */
+  .barra-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #0077cc;
+  }
+
+  .menu-toggle {
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Menu mobile */
+  .menu-mobile {
+    display: none;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-mobile li a {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #0077cc;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  .menu-mobile li a:hover {
+    background-color: #E0F2FE;
+  }
+
+  /* Ajustes gerais */
+  #titulo h1 {
+    font-size: 2em;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  footer ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
