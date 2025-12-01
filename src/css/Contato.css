@@ -1,7 +1,5 @@
 /* 🌐 Base */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -13,13 +11,12 @@ body {
   padding: 0;
 }
 
-/* 🧭 Título */
+/* 🧭 Cabeçalho */
 #titulo {
-  background-color: #E5E7EB;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
-  border: 2px solid #000000;
-  border-radius: 6px;
+  border-bottom: 2px solid #000000;
 }
 
 #titulo h1 {
@@ -28,14 +25,13 @@ body {
   margin: 0;
 }
 
-/* 🧭 Menu de navegação */
+/* 🍔 Menu Desktop */
 .menu-rumo-certo {
   background-color: #ffffff;
   padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border: 2px solid #000000;
-  border-radius: 6px;
-  overflow-x: hidden; /* 🔒 remove scroll horizontal */
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .menu-rumo-certo ul {
@@ -45,11 +41,7 @@ body {
   gap: 32px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* ✅ permite quebra de linha */
-}
-
-.menu-rumo-certo li {
-  flex-shrink: 1;
+  flex-wrap: wrap;
 }
 
 .menu-rumo-certo li a {
@@ -59,8 +51,6 @@ body {
   font-size: 1em;
   padding: 10px 16px;
   transition: background 0.3s, color 0.3s;
-  cursor: pointer;
-  white-space: normal; /* ✅ permite quebra de texto */
 }
 
 .menu-rumo-certo li a:hover {
@@ -68,6 +58,56 @@ body {
   border-radius: 5px;
   color: #005fa3;
 }
+
+/* 🔘 Botão Entrar */
+.btn-login {
+  background-color: #ffffff;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #0077cc;
+  color: #ffffff;
+}
+
+/* 📱 Menu Mobile */
+.barra-mobile { display: none; }
+.menu-mobile { display: none; }
+
+.menu-mobile.ativo {
+  display: block;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-mobile li a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 1.1em;
+  color: #0077cc;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu-mobile li a:hover { background-color: #E0F2FE; }
 
 /* 📞 Contato */
 #contato {
@@ -87,20 +127,9 @@ body {
   text-align: center;
 }
 
-#contato p {
-  margin: 12px 0;
-  font-size: 1em;
-}
-
-#contato a {
-  color: #0077cc;
-  text-decoration: none;
-  word-break: break-word;
-}
-
-#contato a:hover {
-  text-decoration: underline;
-}
+#contato p { margin: 12px 0; font-size: 1em; }
+#contato a { color: #0077cc; text-decoration: none; word-break: break-word; }
+#contato a:hover { text-decoration: underline; }
 
 /* 💬 Botão WhatsApp */
 #contato a[href*="wa.me"] {
@@ -113,25 +142,14 @@ body {
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  cursor: pointer;
   border: 2px solid #000000;
-  text-align: center;
 }
 
-#contato a[href*="wa.me"]:hover {
-  background-color: #1DA851;
-}
+#contato a[href*="wa.me"]:hover { background-color: #1DA851; }
 
 /* 🕒 Horário */
-.horario {
-  margin-top: 20px;
-}
-
-.horario p {
-  margin: 10px 0;
-  font-size: 1em;
-  color: #333333;
-}
+.horario { margin-top: 20px; }
+.horario p { margin: 10px 0; font-size: 1em; color: #333; }
 
 /* 🗺️ Mapa */
 .mapa {
@@ -146,8 +164,8 @@ body {
 footer {
   background-color: #0077cc;
   padding: 20px;
-  border: 2px solid #000000;
-  border-radius: 6px;
+  border-top: 2px solid #000000;
+  text-align: center;
 }
 
 footer ul {
@@ -164,46 +182,49 @@ footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 1em;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus {
   color: #cce7ff;
+  outline: none;
 }
 
 /* 📱 Responsivo */
 @media (max-width: 600px) {
-  #titulo h1 {
-    font-size: 2em;
-  }
+  #titulo h1 { font-size: 2em; }
 
   #contato {
     padding: 16px;
     margin: 20px;
   }
 
-  #contato h2 {
-    font-size: 1.6em;
-  }
-
-  #contato p,
-  .horario p {
-    font-size: 0.95em;
-  }
+  #contato h2 { font-size: 1.6em; }
+  #contato p, .horario p { font-size: 0.95em; }
 
   #contato a[href*="wa.me"] {
     width: 100%;
     padding: 12px;
   }
 
-  .menu-rumo-certo ul {
+  .menu-rumo-certo { display: none; }
+
+  .barra-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #0077cc;
+  }
+
+  .menu-mobile ul {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .menu-rumo-certo li a {
-    display: block;
+  .menu-mobile li a {
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -222,7 +243,5 @@ footer a:hover {
     padding: 10px 0;
   }
 
-  .mapa {
-    margin: 20px 0;
-  }
+  .mapa { margin: 20px 0; }
 }

@@ -1,0 +1,221 @@
+/* 🌐 1. RESET E BASE GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F3F4F6; /* Fundo cinza claro */
+    color: #1F2937;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no final */
+}
+
+/* 🧭 2. CABEÇALHO E NAVEGAÇÃO */
+
+#titulo {
+    background-color: #ffffff;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+
+#titulo h1 {
+    font-size: 2em;
+    color: #0077cc; /* Azul Primário */
+    margin: 0;
+}
+
+/* Menu Desktop */
+.menu-rumo-certo {
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-bottom: 2px solid #000000;
+}
+
+.menu-rumo-certo ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu-rumo-certo li a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 6px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-rumo-certo li a:hover {
+    background-color: #E0F2FE;
+    border-radius: 5px;
+    color: #005fa3;
+}
+
+/* ✅ ESTILIZAÇÃO DO BOTÃO 'ENTRAR' */
+.menu-rumo-certo ul li:last-child a {
+    background-color: #e53935; /* Fundo Vermelho */
+    color: white; 
+    border: 1px solid #c62828; /* Borda Vermelha */
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.menu-rumo-certo ul li:last-child a:hover {
+    background-color: #c62828; /* Vermelho mais escuro no hover */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏠 3. CONTEÚDO PRINCIPAL (MAIN) */
+
+main {
+    flex: 1; 
+    
+    /* ✅ AUMENTA O TAMANHO DA PÁGINA: Ocupa até 900px de largura. */
+    max-width: 900px; 
+    
+    margin: 40px auto; 
+    background-color: #ffffff;
+    /* Simplificando a borda para seguir o estilo do template */
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    padding: 30px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    text-align: center; /* Mantendo o alinhamento centralizado para o texto principal */
+}
+
+main h2 {
+    color: #0077cc;
+    font-size: 1.8em;
+    margin-bottom: 24px;
+}
+
+main p {
+    font-size: 1em;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* ⚓ 4. RODAPÉ */
+
+footer {
+    background-color: #0077cc;
+    padding: 16px;
+    text-align: center;
+    /* Removendo a borda preta */
+    border-top: 1px solid #005fa3; 
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+footer a:hover {
+    color: #cce7ff;
+}
+
+/* 📱 5. RESPONSIVIDADE (MOBILE) */
+
+.barra-mobile {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* Ajusta main para mobile/telas menores */
+@media (max-width: 900px) {
+    main {
+        max-width: 95%; 
+    }
+}
+
+
+@media (max-width: 600px) {
+    .menu-rumo-certo {
+        display: none;
+    }
+
+    .barra-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #0077cc;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Estilos do menu mobile que estavam faltando */
+    .menu-mobile.ativo {
+        display: block;
+        background-color: #ffffff;
+        padding: 16px;
+        border-top: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .menu-mobile ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .menu-mobile li a {
+        text-align: center;
+        display: block;
+        padding: 10px;
+        font-size: 1em;
+        color: #0077cc;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+    }
+
+    #titulo h1 {
+        font-size: 1.6em;
+    }
+
+    main {
+        margin: 15px;
+        padding: 16px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

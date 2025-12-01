@@ -1,0 +1,272 @@
+/* 🌐 Base */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1F2937;
+  background-color: #F3F4F6;
+}
+
+/* 🧭 Cabeçalho */
+#titulo {
+  background-color: #E5E7EB;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+#titulo h1 {
+  font-size: 2.5em;
+  color: #0077cc;
+  margin: 0;
+}
+
+/* 🍔 Menu de navegação */
+.menu-rumo-certo {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 2px solid #000000;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.menu-rumo-certo ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-rumo-certo li {
+  flex-shrink: 1;
+}
+
+.menu-rumo-certo li:last-child {
+  margin-left: auto;
+}
+
+.menu-rumo-certo li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 10px 16px;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu-rumo-certo li a:hover {
+  background-color: #E0F2FE;
+  border-radius: 5px;
+  color: #005fa3;
+}
+
+/* 🔘 Botão de logout */
+.btn-logout {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #a71d2a;
+}
+
+/* 🏠 Conteúdo principal */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+main h2 {
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+/* 🔖 Abas */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.tab-button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* 📝 Formulário de Ordens de Serviço */
+form {
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+form input,
+form textarea,
+form select {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form textarea {
+  min-height: 100px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/* 👥 Listas de usuários e ordens */
+#listaUsuarios,
+#listaOS {
+  list-style: none;
+  padding: 0;
+}
+
+#listaUsuarios li,
+#listaOS li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+}
+
+#listaUsuarios li button,
+#listaOS li button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#listaUsuarios li button:hover,
+#listaOS li button:hover {
+  background: #218838;
+}
+
+/* 🧭 Rodapé */
+footer {
+  background-color: #0077cc;
+  padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: #cce7ff;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 600px) {
+  #titulo h1 {
+    font-size: 2em;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .menu-rumo-certo {
+    overflow-x: auto;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}

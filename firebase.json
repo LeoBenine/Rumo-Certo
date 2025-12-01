@@ -5,6 +5,28 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/login",
+        "destination": "/Html/Login.html"
+      },
+      {
+        "source": "/sobre",
+        "destination": "/Html/Sobre_nos.html"
+      },
+      {
+        "source": "/servicos",
+        "destination": "/Html/Serviços.html"
+      },
+      {
+        "source": "/contato",
+        "destination": "/Html/Contato.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }

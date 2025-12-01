@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggleButton && mobileMenu) {
     toggleButton.addEventListener('click', () => {
-      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+      mobileMenu.classList.toggle('ativo');
     });
 
     document.querySelectorAll('.menu-mobile a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('ativo');
       });
     });
   }

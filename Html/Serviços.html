@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumo Certo</title>
+<!-- Estilos -->
+  <link rel="stylesheet" href="../src/css/Serviços.css">
+
+
+</head>
+
+<body>
+  <!-- 🧭 Cabeçalho -->
+  <header id="titulo">
+    <h1>Rumo Certo</h1>
+  </header>
+
+  <!-- 🍔 Menu -->
+  <nav class="menu-rumo-certo">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🖼️ Galeria de Logos -->
+  <section class="logos"></section> <!-- vazio, preenchido via JS -->
+
+  <!-- 🏠 Conteúdo principal -->
+  <main>
+    <p>Nós trabalhamos com as principais marcas do mercado, oferecendo serviços especializados de conserto e manutenção de eletroportáteis e eletrodomésticos, 
+    como escovas secadoras, secadores, liquidificadores, cafeteiras, air fryers e muito mais.</p>
+    <p>Caso seu aparelho seja de uma marca que não atendemos, nossa equipe informa no momento do orçamento para garantir transparência e evitar custos desnecessários.</p>
+
+    <!-- 🎠 Carrossel de Imagens -->
+    <section class="carrossel">
+      <button class="anterior" aria-label="Imagem anterior">❮</button>
+      <div class="imagens"></div> <!-- vazio, preenchido via JS -->
+      <button class="proximo" aria-label="Próxima imagem">❯</button>
+    </section>
+  </main>
+
+  <!--Rodapé -->
+ 
+  <footer>
+    <nav aria-label="Rodapé">
+      <ul>
+         <li><a href="../index.html">Início</a></li>
+        <li><a href="Sobre_nos.html">Sobre nós</a></li>
+        <li><a href="Contato.html">Contato</a></li>
+         <li><a href="Html/Login.html" class="btn-login">Entrar</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- JavaScript-->
+  <script src="../src/javascript/Menu.js"></script>
+   <script type="module" src="../src/javascript/firebase/Autenticado.js"></script>
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="../src/javascript/Serviços/Carrossel_logos.js"></script>
+  
+
+</body>
+</html>

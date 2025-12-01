@@ -1,4 +1,4 @@
-(function(d){
+(function (d) {
   var s = d.createElement("script");
   s.setAttribute("src", "https://cdn.userway.org/widget.js");
   s.setAttribute("data-account", "9DfFIdc1IL"); // Seu ID da UserWay

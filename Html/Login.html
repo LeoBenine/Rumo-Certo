@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Rumo Certo</title>
+  <link rel="stylesheet" href="../src/css/Login.css" />
+</head>
+<body>
+
+  <!-- 🧭 Cabeçalho -->
+  <header id="titulo">
+    <h1>Rumo Certo</h1>
+  </header>
+
+  <!-- 🍔 Menu de navegação -->
+  <nav class="menu-rumo-certo" aria-label="Menu principal">
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Conteúdo principal -->
+  <main>
+    <h2>Login</h2>
+    <form id="formLogin" autocomplete="off">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="Digite seu e-mail" />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required placeholder="Digite sua senha" />
+
+      <button type="submit">Entrar</button>
+      <button type="button" class="btn-google" id="btnGoogle">Entrar com Google</button>
+    </form>
+
+    <p class="cadastro-link">Não tem conta? <a href="Cadastrar.html">Cadastre-se</a></p>
+  </main>
+
+  <!-- 🧭 Rodapé -->
+  <footer>
+    <ul>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+    </ul>
+  </footer>
+
+  <!-- ⚙️ Scripts -->
+  <script src="../src/javascript/Menu.js"></script>
+  <script type="module" src="../src/javascript/firebase/google_login.js"></script>
+</body>
+</html>

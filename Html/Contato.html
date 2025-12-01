@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumo Certo - Contato</title>
+  <link rel="stylesheet" href="../src/css/Contato.css" />
+</head>
+<body>
+
+  <!-- 🧭 Cabeçalho -->
+  <header id="titulo" role="banner">
+    <h1>Rumo Certo - Contato</h1>
+  </header>
+
+  <!-- 🍔 Menu Desktop -->
+  <nav class="menu-rumo-certo" aria-label="Menu principal">
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Html/Login.html" class="btn-login">Entrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- 📱 Menu Mobile -->
+  <nav class="barra-mobile" role="navigation" aria-label="Menu mobile">
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  </nav>
+  <nav class="menu-mobile" role="navigation" aria-label="Menu mobile expandido">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Html/Login.html">Entrar</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Conteúdo principal -->
+  <main role="main">
+    <section id="contato" aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Entre em contato</h2>
+
+      <!-- Conteúdo gerado via DOM -->
+      <div id="info-contato"></div>
+
+      <!-- 🗺️ Mapa -->
+      <div class="mapa" aria-label="Localização no Google Maps">
+        <iframe
+          src="https://www.google.com/maps?q=R.+Dr.+Delfino+Cintra,+275+-+Botafogo,+Campinas+-+SP,+13020-100&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          title="Mapa de localização da Rumo Certo">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🧭 Rodapé -->
+  <footer role="contentinfo">
+    <nav aria-label="Rodapé">
+      <ul>
+        <li><a href="Sobre_nos.html">Sobre nós</a></li>
+        <li><a href="Serviços.html">Serviços</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- ♿️ VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <!-- ⚙️ Scripts -->
+  <script src="../src/javascript/Contato/Contato.js"></script>
+  <script type="module" src="../src/javascript/firebase/Autenticado.js"></script>
+  <script src="../src/javascript/Menu.js"></script>
+  <script src="../src/javascript/userway-widget.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+</body>
+</html>

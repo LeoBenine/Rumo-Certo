@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin - Rumo Certo</title>
+  <link rel="stylesheet" href="../src/css/Admin.css">
+</head>
+<body>
+
+  <!-- 🧭 Cabeçalho -->
+  <header id="titulo">
+    <h1>Área Administrativa</h1>
+  </header>
+
+  <!-- 🍔 Menu de navegação -->
+  <nav class="menu-rumo-certo" role="navigation" aria-label="Menu principal">
+    <ul>
+      <li><a href="/index.html">Início</a></li>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+      <li><a href="#" id="btnLogout" class="btn-logout">Sair</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Conteúdo principal -->
+  <main>
+    <h2>Painel do Administrador</h2>
+
+    <!-- 🔖 Abas -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="usuarios">Usuários</button>
+      <button class="tab-button" data-tab="ordens">Ordens de Serviço</button>
+    </div>
+
+    <!-- 👥 Aba de Usuários -->
+    <section id="usuarios" class="tab-content active">
+      <h3>Usuários cadastrados</h3>
+      <ul id="listaUsuarios"></ul>
+    </section>
+
+    <!-- 🛠 Aba de Ordens de Serviço -->
+    <section id="ordens" class="tab-content">
+      <h3>Ordens de Serviço</h3>
+
+      <form id="formOS">
+        <label for="numeroSerie">Número de Série:</label>
+        <input type="text" id="numeroSerie" required>
+
+        <label for="cpf">CPF do Cliente:</label>
+        <input type="text" id="cpf" required>
+
+        <label for="celular">Celular do Cliente:</label>
+        <input type="tel" id="celular" required>
+
+        <label for="cliente">Nome do Cliente:</label>
+        <input type="text" id="cliente" readonly> <!-- puxado automaticamente pelo CPF -->
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" required></textarea>
+
+        <label for="dataEntrada">Data de Entrada:</label>
+        <input type="date" id="dataEntrada" required>
+
+        <label for="status">Status:</label>
+        <select id="status">
+          <option value="aberta">Aberta</option>
+          <option value="em andamento">Em andamento</option>
+          <option value="concluída">Concluída</option>
+        </select>
+
+        <button type="submit">Cadastrar OS</button>
+      </form>
+
+      <ul id="listaOS"></ul>
+    </section>
+  </main>
+
+  <!-- 🧭 Rodapé -->
+  <footer>
+    <ul>
+      <li><a href="Sobre_nos.html">Sobre nós</a></li>
+      <li><a href="Serviços.html">Serviços</a></li>
+      <li><a href="Contato.html">Contato</a></li>
+    </ul>
+  </footer>
+
+  <!-- ⚙️ Scripts -->
+  <script type="module" src="../src/javascript/Admin/Admin-tabs.js"></script>
+ <script type="module" src="../src/javascript/Admin/admin.js"></script>
+  <script type="module" src="../src/javascript/Admin/Admin_os.js"></script>
+</body>
+</html>
